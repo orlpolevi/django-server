@@ -1,0 +1,34 @@
+<link rel="shortcut icon" href="#">
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+
+	<h1> Testing out with html for the project </h1>
+		
+
+	<p> User currently watching this page: {{ request.user }} </p>
+	<p>
+		the next data was passed from the view -> {{ text1}} {{ text2}} {{ text3}},
+
+	</p>
+	<p>
+		<table id = "mytable">
+					{%for i in text4 %}
+					<tr> 
+						<td>
+							{{forloop.counter}} <td>{{i}}</td>
+						</td>
+					</tr>
+
+					{% endfor %}
+		</table>
+
+	</p>
+	
+{% endblock %}

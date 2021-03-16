@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="ManagerStyle.css">
+  <script src="ManagerScript.js"></script>
+<!--<style>
+body {font-family: Arial;}
+
+/*Style the tab*/
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>-->
+</head>
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="opentab(event, 'Browse  Student/Totur')">Browse  Student/Totur</button>
+  <button class="tablinks" onclick="opentab(event, 'Browse Corse')">Browse Corse</button>
+  <button class="tablinks" onclick="opentab(event, 'Browse Program')">Browse Program</button>
+  <button class="tablinks" onclick="opentab(event, 'Browse Report')">Browse Report</button>
+</div>
+
+<div id="Browse  Student/Totur" class="tabcontent">
+  <h3>Browse  Student/Totur</h3>
+  <form class="form-inline">   <!---  action="/action_page.php"--->
+   <div class="data">
+        <div>
+          <label for="ID">ID:</label>
+          <input type="numbers" id="ID" placeholder="Enter ID" name="ID number">
+          <button type="submit">Enter</button>
+        </div>
+       <div>
+          <label for="name">Name of student:</label>
+          <input type="text" id="name" placeholder="Name of student" name="Name of student">
+       </div>
+        <br>
+        <br>
+        <div>
+          <label for="name">Curse:</label>
+          <input type="text" id="Curse" placeholder="Name of Curse" name="Name of Curse">
+        </div>
+
+        <div>
+          <label for="name">Program:</label>
+            <select type="select" id="Program" placeholder="Enter Program " name="Type of program">
+                  <option value="Impact">Impact</option>
+                  <option value="Sela">Sela</option>
+                  <option value="Volnteer else">Volnteer else</option>
+            </select>
+        </div>
+   </div>
+    <div>
+        <table>
+        <tr>
+            <th>Course name</th>
+            <th>Course ID</th>
+
+        </tr>
+        <tr>
+            <td>Algebra</td>
+            <td>170001</td>
+
+        </tr>
+        <tr>
+            <td>Softwere</td>
+            <td>1902121</td>
+
+        </tr>
+        </table>
+        <input type="submit" value="Match" formaction="../MatchScreen/matchScreen.html">
+    </div>
+
+
+
+</form>
+</div>
+
+<div id="Browse Corse" class="tabcontent">
+  <h3>Browse Corse</h3>
+<form class="form-inline">
+     <div>
+          <label for="name">Curse:</label>
+          <input type="text" id="Curse" placeholder="Name of Curse" name="Name of Curse">
+            <button type="submit">Search</button>
+   </div>   
+    <div>
+            <input type="numbers"  id="Curse ID " placeholder="Course ID="Course ID">
+            <button type="submit">Search</button>
+        </div>
+
+	 <div>
+        <table>
+<h4>  Student</h4>
+        <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+             <th>Student Class</th>
+
+        </tr>
+        <tr>
+          <td>Israell Smuali</td>
+            <td>987654321</td>
+            <td>Softwere</td>
+
+        </tr>
+        <tr>
+            <td>Shmual Smuali</td>
+            <td>123456789</td>
+            <td>elctricty</td>
+
+        </tr>
+        </table>
+        
+
+ </div>
+<div>
+        <table>
+<h4>  totur</h4>
+        <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+             <th>Student Class</th>
+
+
+        </tr>
+        <tr>
+            <td>Shmual Smuali</td>
+            <td>123456789</td>
+            <td>elctricty</td>
+        </tr>
+        <tr>
+             <td>Israell Smuali</td>
+            <td>987654321</td>
+            <td>Softwere</td>
+        </tr>
+        </table>
+
+    </div>
+</form>
+</div>
+
+<div id="Browse Program" class="tabcontent">
+  <h3>Browsw Program</h3>
+<form class="form-inline">
+	
+ <div>
+          <label for="name">Program:</label>
+            <select type="select" id="Program" placeholder="Enter Program " name="Type of program">
+                  <option value="Impact">Impact</option>
+                  <option value="Sela">Sela</option>
+                  <option value="Volnteer else">Volnteer else</option>
+            </select>
+        </div>
+
+<div>
+ <table>
+       <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+             <th>Student Class</th>
+             <th>Hours left</th>
+
+
+        </tr>
+<tr>
+            <td>Shmual Smuali</td>
+            <td>123456789</td>
+            <td>elctricty</td>
+            <td>25</td>
+        </tr>
+        <tr>
+             <td>Israell Smuali</td>
+            <td>987654321</td>
+            <td>Softwere</td>
+             <td>5</td>
+        </tr>
+        </table>
+
+    </div>
+</form>
+</div>
+
+<div id="Browse Report" class="tabcontent">
+  <h3>Browsw Report</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<!--<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>-->
+   
+</body>
+</html> 

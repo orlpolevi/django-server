@@ -1,0 +1,11 @@
+
+
+{% block content %}
+<h1> user from database is -> {{object.name}} </h1>
+<p> {% if object.lastName == None %} we have nothing to show you right now 
+{%else%}
+	last name is ->{{object.lastName}} 
+	{%endif%}
+	 </p>
+<p> user type is -> {{object.userType}}</p>
+{% endblock %}
